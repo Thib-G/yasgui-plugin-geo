@@ -9,7 +9,7 @@ This project is a simple web application that utilizes the [Yasgui](https://gith
 ```
 vite-yasgui-project
 ├── src
-│   ├── geo-plugin.js  # Plugin to show map in Yars
+│   ├── geo-plugin.js  # Plugin to show map in Yasr
 │   ├── main.js        # Entry point of the application
 │   └── style.css      # Styles for the application
 ├── index.html         # Main HTML file
