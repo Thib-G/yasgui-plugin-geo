@@ -9,6 +9,7 @@ This project is a simple web application that utilizes the [Yasgui](https://gith
 ```
 vite-yasgui-project
 ├── src
+│   ├── geo-plugin.js  # Plugin to show map in Yars
 │   ├── main.js        # Entry point of the application
 │   └── style.css      # Styles for the application
 ├── index.html         # Main HTML file
@@ -20,17 +21,20 @@ vite-yasgui-project
 ## Setup Instructions
 
 1. Clone the repository:
+
    ```
    git clone <repository-url>
    cd vite-yasgui-project
    ```
 
 2. Install the dependencies:
+
    ```
    npm install
    ```
 
 3. Start the development server:
+
    ```
    npm run dev
    ```
