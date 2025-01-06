@@ -9,7 +9,7 @@ Yasgui.Yasr.registerPlugin('geo', GeoPlugin);
 const yasgui = new Yasgui(document.getElementById('yasgui'), {
   // Set the SPARQL endpoint
   requestConfig: {
-    endpoint: 'https://fuseki.linked-data.goelff.be/sncb-facilities',
+    endpoint: 'https://dbpedia.org/sparql',
   },
   yasr: {
     pluginOrder: ['table', 'response', 'geo'], // Enable geo plugin alongside default table
