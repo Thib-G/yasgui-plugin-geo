@@ -1,0 +1,23 @@
+{
+  "name": "vite-yasgui-project",
+  "version": "1.0.0",
+  "description": "A simple project using @triply/yasgui to connect to a SPARQL endpoint.",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@zazuko/yasgui": "^4.4.3",
+    "leaflet": "^1.9.4",
+    "wellknown": "^0.5.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
