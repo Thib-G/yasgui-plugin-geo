@@ -16,6 +16,3 @@ const yasgui = new Yasgui(document.getElementById('yasgui'), {
     defaultPlugin: 'geo',
   },
 });
-
-const tab = yasgui.getTab();
-const yasr = tab.yasr;
