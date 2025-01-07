@@ -82,13 +82,14 @@ class GeoPlugin {
     this.yasr = yasr;
     this.priority = 30;
     this.label = 'Geo';
+    this.geometryColumns = [];
     this.updateColumns();
   }
 
   updateColumns() {
-    const firstColumn = this.yasr.results?.json.results.bindings
-      ? this.yasr.results.json.results.bindings[0]
-      : {};
+    const bindings = this.yasr?.results?.json?.results?.bindings ?? [];
+    const firstColumn = bindings[0] ?? {};
+
     this.geometryColumns = Object.keys(firstColumn)
       .filter(
         (k) =>
