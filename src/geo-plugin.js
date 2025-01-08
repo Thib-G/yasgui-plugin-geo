@@ -46,18 +46,16 @@ const conversions = {
  * @param {string} wktColumn - The key in the binding objects that contains the WKT (Well-Known Text) geometry.
  * @returns {Object} A GeoJSON object representing the features.
  */
-const createGeojson = (bindings, column) => {
-  return {
-    type: 'FeatureCollection',
-    features: bindings.map((item) => ({
-      type: 'Feature',
-      properties: item,
-      geometry: conversions[item[column].datatype]
-        ? conversions[item[column].datatype](item[column].value)
-        : { type: 'Point', coordinates: [] },
-    })),
-  };
-};
+const createGeojson = (bindings, column) => ({
+  type: 'FeatureCollection',
+  features: bindings.map((item) => ({
+    type: 'Feature',
+    properties: item,
+    geometry: conversions[item[column].datatype]
+      ? conversions[item[column].datatype](item[column].value)
+      : { type: 'Point', coordinates: [] },
+  })),
+});
 
 /**
  * A plugin for YASR (Yet Another SPARQL Results) visualizer that displays geographic data on a map.
@@ -141,7 +139,12 @@ class GeoPlugin {
         onEachFeature: (feature, layer) => {
           const p = feature.properties;
           const popupContent = Object.keys(p).map(
-            (k) => `<b>${k}:</b> ${p[k].value}`,
+            (k) =>
+              `<b>${k}:</b> ${
+                p[k].value.length > 120
+                  ? p[k].value.substring(0, 120) + '...'
+                  : p[k].value
+              }`,
           );
           layer.bindPopup(popupContent.join('<br>'));
         },
