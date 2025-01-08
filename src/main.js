@@ -1,9 +1,9 @@
 import '@zazuko/yasgui/build/yasgui.min.css';
 import Yasgui from '@zazuko/yasgui';
 
-import GeoPlugin from './geo-plugin';
+import GeoPlugin from 'yasgui-geo-tg';
+
 //Register the plugin to Yasr
-// yasr.plugins = { ...yasr.plugins, geo: new geoPlugin(yasr) };
 Yasgui.Yasr.registerPlugin('geo', GeoPlugin);
 
 const yasgui = new Yasgui(document.getElementById('yasgui'), {

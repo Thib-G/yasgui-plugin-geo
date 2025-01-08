@@ -11,7 +11,8 @@
   "dependencies": {
     "@zazuko/yasgui": "^4.4.3",
     "leaflet": "^1.9.4",
-    "wellknown": "^0.5.0"
+    "wellknown": "^0.5.0",
+    "yasgui-geo-tg": "github:Thib-G/yasgui-geo-tg"
   },
   "devDependencies": {
     "vite": "^6.0.7"
