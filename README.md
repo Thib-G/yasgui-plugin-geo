@@ -1,8 +1,10 @@
 # README.md
 
-# Vite Yasgui Project
+# Vite Yasgui Geo Demo
 
 This project is a simple web application that utilizes the [Yasgui](https://github.com/Yasgui/Yasgui) library to connect to a SPARQL endpoint. It is built using Vite for fast development and build processes.
+
+It uses a [geographical plugin](https://github.com/Thib-G/yasgui-geo-tg) that I built for Yasgui.
 
 ## Project Structure
 
